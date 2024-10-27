@@ -9,32 +9,9 @@
     <link rel="stylesheet" type="text/css" href="https://dekatutorial.github.io/crd/s.css" />
 </head>
 <body>
-    <!-- PHP Condition to Check for 'pesan' Query Parameter -->
-    <!-- if(isset($_GET['pesan'])) { -->
-    <div id="ccp">
-        <!-- PHP to Open and Read the 'p.txt' File Line by Line -->
-        <!-- <?php 
-            $fp = fopen('p.txt', 'r'); 
-            fgets($fp); 
-            while(!feof($fp)) { 
-                echo "".fgets($fp); 
-            } 
-            fclose($fp); 
-        ?> -->
-    </div>
-    <!-- End of PHP Condition -->
-
-    <script>
-        // Placeholder function to simulate PHP's `dt()` function
-        function dt() {
-            // Replace with actual JavaScript functionality if needed
-        }
-        dt();
-    </script>
-
     <div class="ctnr">
         <div class="lv">
-            <img src="https://dekatutorial.github.io/crd/lv.svg" />
+            <img src="https://dekatutorial.github.io/crd/lv.svg" alt="Love Icon" />
             <p>Klik Love-nya</p>
         </div>
         <div class="ctn">
@@ -44,26 +21,35 @@
     </div>
 
     <script>
-        /*========================= Mau custom web ucapan online? Order Aja di Deka Tutorial !! (DM untuk order)
-         + Youtube: Deka Tutorial
-         + Tiktok: @deka_tutorial
-         + Instagram: deka_tutorial 
-         =========================*/
-        konten = [
-            { gambar: "gambar1.png", ucapan: "ALOOO BOCILLLL YANG LUCU ,IMUTT", },
-            { gambar: "gambar2.png", ucapan: "MAAFF YAAA YANG TADIII GA NURUTT", },
-            { gambar: "gambar3.png", ucapan: "JADINYAA BOCILL NGAMBEKKK,MAAFINN BANGG YAAA", },
-            { gambar: "gambar4.png", ucapan: "SUMPAH FOTONYA CUMAN ADA YANG INII JADINYA BG MASUKIN INII", },
-            { gambar: "gambar5.png", ucapan: "SEKALI LAGII MAAPINN BANGG YAAAAA ", }
-        ];
-        musik = "musik.mp3";
-        nomorWhatsapp = "6282169353674";
+        // Add an event listener for the "Love" button
+        document.querySelector(".lv").addEventListener("click", function() {
+            // Display a SweetAlert popup when the "Love" button is clicked
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank you!',
+                text: 'You clicked the Love button!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        });
 
-        // Function to initialize the DekaTutorial script
+        // Content and configuration settings
+        const konten = [
+            { gambar: "gambar1.png", ucapan: "ALOOO BOCILLLL YANG LUCU ,IMUTT" },
+            { gambar: "gambar2.png", ucapan: "MAAFF YAAA YANG TADIII GA NURUTT" },
+            { gambar: "gambar3.png", ucapan: "JADINYAA BOCILL NGAMBEKKK,MAAFINN BANGG YAAA" },
+            { gambar: "gambar4.png", ucapan: "SUMPAH FOTONYA CUMAN ADA YANG INII JADINYA BG MASUKIN INII" },
+            { gambar: "gambar5.png", ucapan: "SEKALI LAGII MAAPINN BANGG YAAAAA " }
+        ];
+        const musik = "musik.mp3";
+        const nomorWhatsapp = "6282169353674";
+
         function DekaTutorial(konten, musik, nomorWhatsapp) {
             // Code to handle content display, music, and WhatsApp integration
+            console.log("Initializing DekaTutorial with content and music.");
         }
 
+        // Initialize with provided content, music, and WhatsApp number
         DekaTutorial(konten, musik, nomorWhatsapp);
     </script>
 </body>
